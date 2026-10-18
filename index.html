@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VivaGym Reviews Monitor</title>
+<style>
+:root{--bg:#0b0d0f;--panel:#15191d;--line:#2a3036;--text:#f4f5f6;--muted:#a0a8b0;--orange:#ff6b00;--green:#4bd49b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:28px clamp(18px,4vw,52px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px}.mark{width:42px;height:42px;border-radius:12px;background:var(--orange);display:grid;place-items:center;color:#111;font-weight:950;font-size:22px}
+h1{font-size:clamp(20px,3vw,28px);margin:0;letter-spacing:-.04em}.sub{color:var(--muted);font-size:13px}
+button{border:0;background:var(--orange);color:#171717;font-weight:800;padding:11px 16px;border-radius:9px;cursor:pointer}button.secondary{background:#242a30;color:var(--text);border:1px solid var(--line)}
+main{max-width:1250px;margin:auto;padding:28px clamp(16px,4vw,52px) 60px}
+.notice{border:1px solid #54402e;background:#20170f;color:#ffd7b8;padding:14px 16px;border-radius:12px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:22px}.stat,.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}.stat label{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.stat strong{display:block;font-size:28px;margin-top:8px;letter-spacing:-.04em}
+.panel h2{margin:0 0 14px;font-size:18px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:680px}th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)}th{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}td a{color:var(--orange);text-decoration:none;font-weight:700}.rating{font-weight:800}.muted{color:var(--muted)}.pill{display:inline-block;padding:4px 8px;border-radius:99px;background:#252b31;color:#cbd2d8;font-size:12px}
+footer{color:var(--muted);font-size:12px;margin-top:18px}.actions{display:flex;gap:8px;flex-wrap:wrap}.empty{padding:28px 10px;color:var(--muted);text-align:center}
+@media(max-width:680px){.stats{grid-template-columns:1fr}.stat strong{font-size:24px}header{align-items:flex-start}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="mark">V</div><div><h1>VivaGym Reviews Monitor</h1><div class="sub">Seguimiento de fichas públicas · Sevilla</div></div></div><div class="actions"><button class="secondary" id="reload">Actualizar panel</button><button id="export">Exportar CSV</button></div></header>
+<main>
+<div class="notice"><strong>Fuente y transparencia.</strong> Este panel solo muestra datos verificados que se hayan incorporado al archivo de datos. No extrae automáticamente contenido de Google Maps. La fecha de cada consulta y el enlace a la ficha deben acompañar a los datos.</div>
+<section class="stats">
+<div class="stat"><label>Fichas configuradas</label><strong id="clubCount">6</strong></div>
+<div class="stat"><label>Última revisión registrada</label><strong id="lastDate" style="font-size:20px">Pendiente</strong></div>
+<div class="stat"><label>Datos disponibles</label><strong id="dataStatus" style="font-size:20px">Sin medición</strong></div>
+</section>
+<section class="panel"><h2>Seguimiento por gimnasio</h2><div class="tablewrap"><table><thead><tr><th>Gimnasio</th><th>Valoración</th><th>Total reseñas</th><th>Consultado</th><th>Ficha</th></tr></thead><tbody id="rows"><tr><td colspan="5" class="empty">Cargando datos…</td></tr></tbody></table></div><footer>Los campos sin datos verificados se muestran como “—”. No se estiman ni se inventan valores.</footer></section>
+<section class="panel" style="margin-top:18px"><h2>Último informe</h2><div id="summary" class="muted">Todavía no hay ningún informe publicado.</div></section>
+<footer>VivaGym Reviews Monitor · Datos sujetos a disponibilidad y condiciones de la fuente consultada.</footer>
+</main>
+<script>
+const fallback={updatedAt:null,summary:"Todavía no hay ningún informe publicado.",clubs:[
+{name:"VivaGym Alcalá Plaza",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza"},
+{name:"VivaGym Camas",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla"},
+{name:"VivaGym Dos Hermanas",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas"},
+{name:"VivaGym Los Remedios",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla"},
+{name:"VivaGym Nervión",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n+Sevilla"},
+{name:"VivaGym Sevilla Este",mapsUrl:"https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este"}]};
+let current=fallback;
+function fmt(v){return v===null||v===undefined||v===""?"—":v}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function render(data){current=data;const clubs=data.clubs||[];document.getElementById("clubCount").textContent=clubs.length;document.getElementById("lastDate").textContent=data.updatedAt?new Date(data.updatedAt).toLocaleDateString("es-ES"):"Pendiente";document.getElementById("dataStatus").textContent=clubs.some(c=>c.rating!=null||c.reviewCount!=null)?"Con datos":"Sin medición";document.getElementById("summary").textContent=data.summary||"Sin resumen para esta revisión.";document.getElementById("rows").innerHTML=clubs.map(c=>'<tr><td><strong>'+esc(c.name)+'</strong></td><td class="rating">'+esc(fmt(c.rating))+'</td><td>'+esc(fmt(c.reviewCount))+'</td><td>'+esc(fmt(c.checkedAt||data.updatedAt))+'</td><td><a href="'+esc(c.mapsUrl||"#")+'" target="_blank" rel="noopener noreferrer">Abrir Maps ↗</a></td></tr>').join("")}
+async function load(){try{const r=await fetch("./data/reviews.json?ts="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("data no disponible");render(await r.json())}catch(e){render(fallback)}}
+document.getElementById("reload").addEventListener("click",load);
+document.getElementById("export").addEventListener("click",()=>{const rows=[["Gimnasio","Valoración","Total reseñas","Consultado","Ficha"],...(current.clubs||[]).map(c=>[c.name,c.rating??"",c.reviewCount??"",c.checkedAt||current.updatedAt||"",c.mapsUrl||""])];const csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")).join("\r\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8;"}));a.download="vivagym-reviews.csv";a.click();URL.revokeObjectURL(a.href)});
+load();
+</script>
+</body></html>
