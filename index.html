@@ -7,7 +7,7 @@
 :root{--bg:#0b0d0f;--panel:#15191d;--line:#2a3036;--text:#f4f5f6;--muted:#a0a8b0;--orange:#FD5000;--green:#4bd49b}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
 header{padding:28px clamp(18px,4vw,52px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:14px}.mark{width:46px;height:46px;display:grid;place-items:center;flex:0 0 46px}.mark svg{width:46px;height:46px;display:block}.brandname{font-weight:950;font-size:24px;letter-spacing:-.06em;line-height:1}.brandname .gym{color:var(--orange)}
+.brand{display:flex;align-items:center;gap:18px}.brand-logo{display:block;width:180px;max-width:42vw;height:auto;object-fit:contain}.brand-copy{border-left:1px solid var(--line);padding-left:18px}
 h1{font-size:clamp(20px,3vw,28px);margin:0;letter-spacing:-.04em}.sub{color:var(--muted);font-size:13px}
 button{border:0;background:var(--orange);color:#171717;font-weight:800;padding:11px 16px;border-radius:9px;cursor:pointer}button.secondary{background:#242a30;color:var(--text);border:1px solid var(--line)}
 main{max-width:1250px;margin:auto;padding:28px clamp(16px,4vw,52px) 60px}
@@ -19,7 +19,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px}.actions{display:flex;g
 </style>
 </head>
 <body>
-<header><div class="brand"><div class="mark" aria-label="VivaGym"><svg viewBox="0 0 64 64" role="img" aria-hidden="true"><path d="M7 10h15l10 28 10-28h15L37 54H27L7 10Z" fill="#FD5000"/><path d="M45 45h12v9H45z" fill="#FD5000"/></svg></div><div><div class="brandname"><span>Viva</span><span class="gym">Gym</span></div><h1 style="font-size:16px;letter-spacing:-.02em;margin-top:5px">Reviews Monitor</h1><div class="sub">Seguimiento de fichas públicas · Sevilla</div></div></div><div class="actions"><button class="secondary" id="reload">Recargar datos</button><button id="export">Exportar CSV</button></div></header>
+<header><div class="brand"><img class="brand-logo" src="./assets/vivagym-logo.svg" alt="VivaGym"><div class="brand-copy"><h1>Reviews Monitor</h1><div class="sub">Seguimiento de fichas públicas · Sevilla</div></div></div><div class="actions"><button class="secondary" id="reload">Recargar datos</button><button id="export">Exportar CSV</button></div></header>
 <main>
 <div class="notice"><strong>Estado de la fuente</strong><br>El botón recarga los datos publicados en el panel; no consulta Google Maps por sí solo. Para incorporar valoraciones nuevas hay que actualizar el archivo de datos con cifras verificadas. <span id="loadMessage" role="status" aria-live="polite">Preparado para cargar los datos guardados.</span></div>
 <section class="stats">
