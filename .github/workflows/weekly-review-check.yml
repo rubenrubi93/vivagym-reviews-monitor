@@ -1,0 +1,43 @@
+name: Weekly review data check
+
+on:
+  schedule:
+    # Mondays at 07:00 UTC (09:00 in mainland Spain during summer)
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-review-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate review data without inventing values
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/reviews.json")
+          data = json.loads(path.read_text(encoding="utf-8"))
+          clubs = data.get("clubs", [])
+          if not isinstance(clubs, list):
+              raise SystemExit("ERROR: 'clubs' must be a list")
+
+          print(f"Review data file is valid. Configured clubs: {len(clubs)}")
+          for club in clubs:
+              name = club.get("name", "(unnamed club)")
+              rating = club.get("rating")
+              count = club.get("reviewCount")
+              checked = club.get("checkedAt") or data.get("updatedAt")
+              if rating is None or count is None:
+                  print(f"PENDING: {name} — no verified rating/review count stored.")
+              else:
+                  print(f"DATA: {name} — rating={rating}, reviewCount={count}, checkedAt={checked or 'not recorded'}")
+
+          print("No Google Maps scraping is performed. A compliant data source must be connected before values can update automatically.")
+          PY
