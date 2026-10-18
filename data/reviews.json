@@ -1,0 +1,30 @@
+{
+  "updatedAt": null,
+  "summary": "Panel preparado. Aún no se han añadido valores verificados en esta primera versión.",
+  "clubs": [
+    {
+      "name": "VivaGym Alcalá Plaza",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza"
+    },
+    {
+      "name": "VivaGym Camas",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla"
+    },
+    {
+      "name": "VivaGym Dos Hermanas",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas"
+    },
+    {
+      "name": "VivaGym Los Remedios",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla"
+    },
+    {
+      "name": "VivaGym Nervión",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n+Sevilla"
+    },
+    {
+      "name": "VivaGym Sevilla Este",
+      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este"
+    }
+  ]
+}
