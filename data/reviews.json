@@ -1,115 +1,121 @@
 {
   "updatedAt": "2026-10-19",
-  "summary": "Actualizado el 19/10/2026 con las valoraciones y el número de reseñas devueltos para las fichas de Google Maps de cada centro.",
-  "source": "Fichas públicas de Google Maps (resultados estructurados de las fichas de negocio).",
+  "summary": "Revisión de las seis fichas de negocio de Google Maps el 19/10/2026.",
+  "source": "Fichas de negocio de Google Maps consultadas en resultados estructurados; cifras revisadas para cada centro.",
   "clubs": [
     {
       "name": "VivaGym Alcalá Plaza",
       "rating": 4.4,
       "reviewCount": 767,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Alcal%C3%A1%20Plaza",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza+Sevilla",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.4,
           "reviewCount": 767,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJxTl0K79kEg0RLFzlRWS-tbI"
         }
       ],
-      "placeId": "ChIJxTl0K79kEg0RLFzlRWS-tbI"
+      "placeId": "ChIJxTl0K79kEg0RLFzlRWS-tbI",
+      "source": "Google Maps business listing"
     },
     {
       "name": "VivaGym Camas",
       "rating": 4.5,
       "reviewCount": 804,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Camas",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.5,
           "reviewCount": 804,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJlbAJLABtEg0RQWplcMSL8XU"
         }
       ],
-      "placeId": "ChIJlbAJLABtEg0RQWplcMSL8XU"
+      "placeId": "ChIJlbAJLABtEg0RQWplcMSL8XU",
+      "source": "Google Maps business listing"
     },
     {
       "name": "VivaGym Dos Hermanas",
       "rating": 4.6,
       "reviewCount": 1035,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Dos%20Hermanas",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.6,
           "reviewCount": 1035,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJgVa_70hxEg0R7at2wnjNKKY"
         }
       ],
-      "placeId": "ChIJgVa_70hxEg0R7at2wnjNKKY"
+      "placeId": "ChIJgVa_70hxEg0R7at2wnjNKKY",
+      "source": "Google Maps business listing"
     },
     {
       "name": "VivaGym Los Remedios",
       "rating": 4.6,
       "reviewCount": 1864,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Los%20Remedios",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.6,
           "reviewCount": 1864,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJIZOFqz9sEg0RWkg59VBKlO0"
         }
       ],
-      "placeId": "ChIJIZOFqz9sEg0RWkg59VBKlO0"
+      "placeId": "ChIJIZOFqz9sEg0RWkg59VBKlO0",
+      "source": "Google Maps business listing"
     },
     {
       "name": "VivaGym Nervión",
       "rating": 4.9,
       "reviewCount": 851,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Nervi%C3%B3n%20Sevilla",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n+Sevilla",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.9,
           "reviewCount": 851,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJ6bCP9n9vEg0ROgqRi26n74o"
         }
       ],
-      "placeId": "ChIJ6bCP9n9vEg0ROgqRi26n74o"
+      "placeId": "ChIJ6bCP9n9vEg0ROgqRi26n74o",
+      "source": "Google Maps business listing"
     },
     {
       "name": "VivaGym Sevilla Este",
       "rating": 4.1,
       "reviewCount": 691,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym%20Sevilla%20Este",
+      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.1,
           "reviewCount": 691,
-          "source": "Google Maps listing",
+          "source": "Google Maps business listing",
           "placeId": "ChIJS7u-pTRvEg0RjzN3T-TM2mQ"
         }
       ],
-      "placeId": "ChIJS7u-pTRvEg0RjzN3T-TM2mQ"
+      "placeId": "ChIJS7u-pTRvEg0RjzN3T-TM2mQ",
+      "source": "Google Maps business listing"
     }
   ]
 }
