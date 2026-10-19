@@ -64,7 +64,16 @@ def main():
             raise RuntimeError(f"No hay consulta configurada para el club: {club.get('name')}")
         place = search_place(query)
         display_name = place.get("displayName", {}).get("text", "")
-        if not display_name or "vivagym" not in display_name.lower():
+        expected_terms = {
+            "VivaGym Alcalá Plaza": ("alcal", "plaza"),
+            "VivaGym Camas": ("camas",),
+            "VivaGym Dos Hermanas": ("dos hermanas",),
+            "VivaGym Los Remedios": ("remedios",),
+            "VivaGym Nervión": ("nervion", "nervión"),
+            "VivaGym Sevilla Este": ("sevilla este",),
+        }[club["name"]]
+        normalized_name = display_name.casefold()
+        if not display_name or "vivagym" not in normalized_name or not any(term in normalized_name for term in expected_terms):
             raise RuntimeError(f"Resultado inesperado para {club['name']}: {display_name!r}. No se guardaron cambios.")
         if "rating" not in place or "userRatingCount" not in place:
             raise RuntimeError(f"La API no devolvió puntuación y/o número de reseñas para {club['name']}. No se guardaron cambios.")
