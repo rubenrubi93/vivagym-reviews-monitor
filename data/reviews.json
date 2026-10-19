@@ -1,101 +1,101 @@
 {
   "updatedAt": "2026-10-19",
-  "summary": "Consulta del 19/10/2026 mediante resultados de fichas de negocio vinculadas a Google Maps. Los valores pueden variar según la actualización de la ficha y conviene abrir el enlace de Maps para comprobar la cifra visible en ese momento.",
-  "source": "Consulta de fichas de negocio y resultados públicos vinculados a Google Maps; sin scraping automatizado. Enlaces directos de búsqueda de Google Maps guardados por club.",
+  "summary": "Actualización manual del 19/10/2026 con los datos públicos más recientes localizados en directorios que reproducen valoraciones de Google. No se pudo confirmar en directo cada cifra dentro de Google Maps; pueden existir desfases.",
+  "source": "Directorios públicos que indican usar valoraciones de Google: Misclub (fichas individuales y listado de VivaGym). Los valores no son una lectura en tiempo real de la API oficial ni una verificación directa en la interfaz de Google Maps.",
   "clubs": [
     {
       "name": "VivaGym Alcalá Plaza",
-      "rating": 4.4,
-      "reviewCount": 767,
+      "rating": 4.2,
+      "reviewCount": 525,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza",
+      "sourceUrl": "https://misclub.es/cadenas/vivagym",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza",
       "history": [
         {
           "date": "2026-10-19",
-          "rating": 4.4,
-          "reviewCount": 767,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Alcal%C3%A1+Plaza"
+          "rating": 4.2,
+          "reviewCount": 525,
+          "sourceUrl": "https://misclub.es/cadenas/vivagym"
         }
       ]
     },
     {
       "name": "VivaGym Camas",
       "rating": 4.5,
-      "reviewCount": 804,
+      "reviewCount": 791,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla",
+      "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-camas",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.5,
-          "reviewCount": 804,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Camas+Sevilla"
+          "reviewCount": 791,
+          "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-camas"
         }
       ]
     },
     {
       "name": "VivaGym Dos Hermanas",
-      "rating": 4.6,
-      "reviewCount": 1035,
+      "rating": 4.5,
+      "reviewCount": 709,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas",
+      "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-dos-hermanas-dos-hermanas",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas",
       "history": [
         {
           "date": "2026-10-19",
-          "rating": 4.6,
-          "reviewCount": 1035,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Dos+Hermanas"
+          "rating": 4.5,
+          "reviewCount": 709,
+          "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-dos-hermanas-dos-hermanas"
         }
       ]
     },
     {
       "name": "VivaGym Los Remedios",
       "rating": 4.6,
-      "reviewCount": 1864,
+      "reviewCount": 1844,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla",
+      "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-los-remedios",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla",
       "history": [
         {
           "date": "2026-10-19",
           "rating": 4.6,
-          "reviewCount": 1864,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Los+Remedios+Sevilla"
+          "reviewCount": 1844,
+          "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-los-remedios"
         }
       ]
     },
     {
       "name": "VivaGym Nervión",
-      "rating": 4.9,
-      "reviewCount": 851,
+      "rating": 4.7,
+      "reviewCount": 318,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n",
+      "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-nervion-sevilla",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n",
       "history": [
         {
           "date": "2026-10-19",
-          "rating": 4.9,
-          "reviewCount": 851,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Nervi%C3%B3n"
+          "rating": 4.7,
+          "reviewCount": 318,
+          "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-nervion-sevilla"
         }
       ]
     },
     {
       "name": "VivaGym Sevilla Este",
-      "rating": 4.1,
-      "reviewCount": 691,
+      "rating": 4.2,
+      "reviewCount": 638,
       "checkedAt": "2026-10-19",
-      "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este",
+      "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-sevilla-este",
       "mapsUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este",
       "history": [
         {
           "date": "2026-10-19",
-          "rating": 4.1,
-          "reviewCount": 691,
-          "sourceUrl": "https://www.google.com/maps/search/?api=1&query=VivaGym+Sevilla+Este"
+          "rating": 4.2,
+          "reviewCount": 638,
+          "sourceUrl": "https://misclub.es/centros/gimnasio-vivagym-sevilla-este"
         }
       ]
     }
