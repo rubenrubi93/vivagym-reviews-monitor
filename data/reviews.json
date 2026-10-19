@@ -117,5 +117,8 @@
       "placeId": "ChIJS7u-pTRvEg0RjzN3T-TM2mQ",
       "source": "Google Maps business listing"
     }
-  ]
+  ],
+  "monthlyReviews": [],
+  "monthlyReviewsPeriodDays": 30,
+  "monthlyReviewsNote": "Solo añadir reseñas verificadas directamente en las fichas públicas de Google Maps. Cada entrada debe incluir clubName, date, rating, text y, cuando esté disponible, author y url. No inventar reseñas."
 }
